@@ -35,11 +35,11 @@ const addNote = (title, body) => {
 
 const removeNote = (title) => {
     const notes = loadNotes()
-    const notesToKeep = notes.filter(note => note.title !== title)
+    const filteredNotes = notes.filter(note => note.title !== title)
 
-    if (notes.length > notesToKeep.length) {
+    if (notes.length > filteredNotes.length) {
         console.log(chalk.rgb(7,174,1).inverse(' Note removed! '))
-        saveNotes(notesToKeep)
+        saveNotes(filteredNotes)
     }
     else {
         console.log(chalk.rgb(212,0,0).inverse(' Note doesn\'t exist... '))
