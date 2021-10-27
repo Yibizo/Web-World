@@ -11,7 +11,7 @@ const addNote = (title, body) => {
         const antePost = (hours > 11) ? 'PM' : 'AM'
         hours = (hours > 12) ? hours-12 : hours
         hours = (antePost === 'AM' && hours === 0) ? 12 : hours
-        hours = (hours.toString().length === 1) ? `0${hours.toString()}` : hours
+        hours = (hours.toString().length === 1) ? `0${hours}` : hours
         
         let minutes = dateTime.getMinutes()
         minutes = (minutes.toString().length === 1) ? `0${minutes.toString()}` : minutes
