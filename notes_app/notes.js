@@ -4,7 +4,7 @@ const chalk = require('chalk')
 const addNote = (title, body) => {
     const notes = loadNotes()
     const dateTime = new Date()
-    const isDup = notes.find(note => note.title === title)
+    const isDup = notes.find(note => note.title === title) ? true : false
 
     if (!isDup) {
         let hours = dateTime.getHours()
