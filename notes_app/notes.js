@@ -7,7 +7,6 @@ const addNote = (title, body) => {
     const isDup = notes.find(note => note.title === title)
 
     if (!isDup) {
-
         let hours = dateTime.getHours()
         const antePost = (hours > 11) ? 'PM' : 'AM'
         hours = (hours > 12) ? hours-12 : hours
