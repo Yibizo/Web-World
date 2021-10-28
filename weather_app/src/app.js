@@ -21,20 +21,30 @@ hbs.registerPartials(partialsDirectoryPath)
 
 app.get('', (req, res) => {
     res.render('index', {
-        test: 'Test Text'
+        file: 'index',
+        section: 'Home'
     })
 })
 
 app.get('/weather', (req, res) => {
-    res.render('weather')
+    res.render('weather', {
+        file: 'weather',
+        section: 'Weather'
+    })
 })
 
 app.get('/help', (req, res) => {
-    res.render('help')
+    res.render('help', {
+        file: 'help',
+        section: 'Help'
+    })
 })
 
 app.get('/about', (req, res) => {
-    res.render('about')
+    res.render('about', {
+        file: 'about',
+        section: 'About Us'
+    })
 })
 
 
