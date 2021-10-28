@@ -47,6 +47,13 @@ app.get('/about', (req, res) => {
     })
 })
 
+app.get('*', (req, res) => {
+    res.render('error', {
+        file: 'error',
+        section: 'Error'
+    })
+})
+
 
 app.listen(port, () => {
     console.log(`Using port ${port}`)

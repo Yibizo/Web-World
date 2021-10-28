@@ -6,18 +6,40 @@
     </head>
     <body>
         {{>header}}
-        <div>
-            <div>
-                <form action="">
-                    <input type="text" placeholder="Location...">
-                    <input type="submit" value="sumbit">
+        <div id="flexContainer">
+            <div id="form">
+                <form>
+                    <input type="text" placeholder="City name...">
+                    <input type="submit" value="submit">
                 </form>
+                <div>
+                    <img src="https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png">
+                </div>
             </div>
-            <div>
-                <div>City: Mexico City</div>
-                <div>Temperature: 25°</div>
+            <div id="text">
+                <table>
+                    <col style="width: 30%;">
+                    <col style="width: 70%;">
+                    <tr>
+                        <td>City</td>
+                        <td id="city">Mexico City</td>
+                    </tr>
+                    <tr>
+                        <td>Description</td>
+                        <td id="cloudy">Cloudy</td>
+                    </tr>
+                    <tr>
+                        <td>Temperature</td>
+                        <td id="temperature">25°</td>
+                    </tr>
+                    <tr>
+                        <td>Time</td>
+                        <td id="time">Daytime</td>
+                    </tr>
+                </table>
             </div>
         </div>
         {{>footer}}
     </body>
+    <script src="../js/weather.js"></script>
 </html>
