@@ -25,10 +25,18 @@
     font-size: 1.5vw;
 }
 
+#form > form > input[type=text]:hover{
+    cursor: auto;
+}
+
 #form > form > input[type=submit]{
     padding: 1vh 1vw;
     border-radius: .3vw;
     font-size: 1.5vw;
+}
+
+#form > form > input[type=submit]:hover{
+    cursor: pointer;
 }
 
 #form > div > img{

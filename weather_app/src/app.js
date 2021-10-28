@@ -44,14 +44,15 @@ app.get('/weather/:city', (req, res) => {
         if (error) {
             res.send({ error })
         }
-
-        res.send({
-            city: req.params.city,
-            description: forecastData[0],
-            temperature: forecastData[1],
-            daytime: (forecastData[2] === 'yes') ? true : false,
-            imageUrl: forecastData[3]
-        })
+        else{
+            res.send({
+                city: req.params.city,
+                description: forecastData[0],
+                temperature: forecastData[1],
+                daytime: (forecastData[2] === 'yes') ? true : false,
+                imageUrl: forecastData[3]
+            })
+        }
     })
 })
 
@@ -65,7 +66,23 @@ app.get('/help', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', {
         file: 'about',
-        section: 'About Us'
+        section: 'About Us',
+
+        img1: 'default_profile.jpg',
+        name1: 'Bridget Kaydence',
+        pos1: 'CEO',
+
+        img2: 'default_profile.jpg',
+        name2: 'Alphonzo Narelle',
+        pos2: 'COO',
+
+        img3: 'default_profile.jpg',
+        name3: 'Demetria Baxter',
+        pos3: 'CTO',
+
+        img4: 'default_profile.jpg',
+        name4: 'Katrina Raynard',
+        pos4: 'CMO'
     })
 })
 
