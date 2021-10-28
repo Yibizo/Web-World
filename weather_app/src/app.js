@@ -3,7 +3,7 @@ const path = require('path')
 const app = express()
 const hbs = require('hbs')
 
-//  TODO: const forecast
+const forecast = require('./utils/forecast')
 
 const templatesDirectoryPath = path.join(__dirname, '../templates')
 const viewsDirectoryPath = `${templatesDirectoryPath}/views`
@@ -30,6 +30,28 @@ app.get('/weather', (req, res) => {
     res.render('weather', {
         file: 'weather',
         section: 'Weather'
+    })
+})
+
+app.get('/weather/:city', (req, res) => {
+    if (!req.params.city) {
+        return res.send({
+            error: 'Location not found'
+        })
+    }
+
+    forecast(req.params.city, (error, forecastData) => {
+        if (error) {
+            res.send({ error })
+        }
+
+        res.send({
+            city: req.params.city,
+            description: forecastData[0],
+            temperature: forecastData[1],
+            daytime: (forecastData[2] === 'yes') ? true : false,
+            imageUrl: forecastData[3]
+        })
     })
 })
 
