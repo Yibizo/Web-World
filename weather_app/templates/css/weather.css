@@ -47,12 +47,13 @@
 
 #form > form > input[type=submit]:hover{
     cursor: pointer;
+    background-color: rgb(29, 29, 29);
 }
 
 #form > div > img{
     border-radius: 10vw;
     width: 10vw;
-    border: solid rgba(255, 255, 255, 0.678) .3vw;
+    border: solid rgba(255, 255, 255, 0.199) .3vw;
 }
 
 #text{

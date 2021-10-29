@@ -42,6 +42,7 @@ form{
     color: white;
     padding: 1vh .5vw;
     font-size: 1vw;
+    outline: none;
 }
 
 #formContainer > div > input[type=text]:hover{
@@ -65,6 +66,7 @@ form{
     color: white;
     padding: 1vh .5vw;
     font-size: 1vw;
+    outline: none;
 }
 
 #messageContainer > textarea:hover{
@@ -81,8 +83,16 @@ form > input[type=submit]{
     color: white;
     padding: 1.5vh 1vw;
     border-radius: .3vw;
+    width: 100%;
+    font-size: 1.4vw;
 }
 
 form > input[type=submit]:hover{
     cursor: pointer;
+    background-color: rgb(29, 29, 29);
+}
+
+::placeholder{
+    color: white;
+    opacity: .6;
 }
