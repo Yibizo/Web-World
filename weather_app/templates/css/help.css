@@ -44,6 +44,10 @@ form{
     font-size: 1vw;
 }
 
+#formContainer > div > input[type=text]:hover{
+    cursor: auto;
+}
+
 #messageContainer{
     display: flex;
     flex-direction: column;
@@ -63,6 +67,10 @@ form{
     font-size: 1vw;
 }
 
+#messageContainer > textarea:hover{
+    cursor: auto;
+}
+
 .subTitle{
     width: 100%;
     padding-bottom: 2vh;
@@ -73,4 +81,8 @@ form > input[type=submit]{
     color: white;
     padding: 1.5vh 1vw;
     border-radius: .3vw;
+}
+
+form > input[type=submit]:hover{
+    cursor: pointer;
 }
