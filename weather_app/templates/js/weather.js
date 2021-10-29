@@ -14,7 +14,7 @@ weatherForm.addEventListener('submit', (e) => {
                 displayElements[1].textContent = ''
                 displayElements[2].textContent = ''
                 displayElements[3].textContent = ''
-                displayElements[4].src = ''
+                displayElements[4].src = '../img/question_mark.png'
             } else {
                 displayElements[0].textContent = data.city
                 displayElements[1].textContent = data.description

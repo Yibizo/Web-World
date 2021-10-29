@@ -6,7 +6,27 @@
     </head>
     <body>
         {{>header}}
-        <p>{{test}}</p>
+        <div id="flexContainer">
+            <div id="topText">Have any questions? Send us an email!</div>
+            <form>
+                <div id="formContainer">
+                    <div class="formSection">
+                        <div class="subTitle">Email <span style="color: rgb(255, 0, 0);">*</span></div>
+                        <input id="email" type="text">
+                    </div>
+                    <div class="formSection">
+                        <div class="subTitle">Subject <span style="color: rgb(255, 0, 0);">*</span></div>
+                        <input id="subject" type="text">
+                    </div>
+                </div>
+                <div id="messageContainer">
+                    <div class="subTitle">Message <span style="color: rgb(255, 0, 0);">*</span></div>
+                    <textarea id="message"></textarea>
+                </div>
+                <input type="submit" value="submit">
+            </form>
+        </div>
         {{>footer}}
+        <script src="../js/help.js"></script>
     </body>
 </html>
